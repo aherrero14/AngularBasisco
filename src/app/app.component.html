@@ -1,9 +1,8 @@
-
-<app-form-search [labelButton]="labelBuscar" [placeholder]="labelPlaceHolder"
- (searchEvent)="search($event)"></app-form-search>
-
-<app-list-owners></app-list-owners>
-
-<p>{{msgEventSearch}}</p>
-
+<ul>
+    <li><a routerLink="/" routerLinkActive="active">Welcome</a></li>
+    <li><a routerLink="/owners" routerLinkActive="active">Owners</a></li>
+    <li><a routerLink="/vets" routerLinkActive="active">Vets</a></li>
+</ul>
 <router-outlet></router-outlet>
+
+

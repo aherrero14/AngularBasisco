@@ -6,13 +6,15 @@ import { FormSearchComponent } from './form-search/form-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListOwnersComponent } from './list-owners/list-owners.component';
 import { OwnerService } from './owner.service';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   exports: [
     FormSearchComponent, ListOwnersComponent

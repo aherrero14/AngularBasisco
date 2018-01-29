@@ -1,7 +1,9 @@
 <h3>Owners:</h3>
 <ul>
-  <li *ngFor="let owner of owners; let i = index;">
-    {{owner.firstName}} {{owner.lastName}} - {{owner.city}}
+  <li *ngFor="let owner of owners; let i = index;">    
+    <a routerLink="/owners/{{owner.id}}" routerLinkActive="active"
+      (click)="onSelect(owner)">
+      {{owner.firstName}} {{owner.lastName}} - {{owner.city}}</a>
   </li>
 </ul>
 
