@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchService} from '../search.service';
 import { EventEmitter } from '@angular/core';
 import { Input, Output } from '@angular/core';
 
@@ -19,7 +18,7 @@ export class FormSearchComponent implements OnInit {
   @Output()
   searchEvent = new EventEmitter;
 
-  constructor (private searchService: SearchService) {
+  constructor () {
     this.query = '';
   }
 
@@ -27,6 +26,7 @@ export class FormSearchComponent implements OnInit {
   }
 
   search() {
+    this.result = 'Resultado para la búsqueda ' + this.query;
     this.searchEvent.emit({query: this.query, resultado: this.result});
   }
 
