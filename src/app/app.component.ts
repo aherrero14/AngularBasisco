@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  public labelBuscar ='Buscar';
+  public labelPlaceHolder = 'Escriba el texto a buscar';
+
+  public msgEventSearch: string;
+
+  constructor(){}
+
+  search(event) {
+    this.msgEventSearch = event.query + ' => ' + event.resultado;
+  }
+
 }
