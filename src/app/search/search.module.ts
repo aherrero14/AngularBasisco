@@ -4,8 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormSearchComponent } from './form-search/form-search.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ListOwnersComponent } from './list-owners/list-owners.component';
-import { OwnerService } from './owner.service';
+import { OwnerService } from '../owners/owner.service';
 import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
@@ -17,9 +16,9 @@ import { AppRoutingModule } from '../app-routing.module';
     AppRoutingModule,
   ],
   exports: [
-    FormSearchComponent, ListOwnersComponent
+    FormSearchComponent
   ],
-  declarations: [FormSearchComponent, ListOwnersComponent],
+  declarations: [FormSearchComponent],
   providers: [OwnerService]
 })
 export class SearchModule { }

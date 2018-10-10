@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {OwnerService} from '../../search/owner.service';
+import {OwnerService} from '../owner.service';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Owner} from '../../models/owner';
 import {Pet} from '../../models/pet';
@@ -15,9 +15,9 @@ export class DetailOwnerComponent implements OnInit {
   errorMessage: string;
   owner: Owner;
 
-  constructor(private route: ActivatedRoute, private router: Router, private ownerService: OwnerService) {
-    this.owner = <Owner>{};
-  }
+  constructor(private route: ActivatedRoute,
+    private router: Router,
+    private ownerService: OwnerService) {  }
 
   ngOnInit() {
     const ownerId = this.route.snapshot.params['id'];
@@ -28,3 +28,4 @@ export class DetailOwnerComponent implements OnInit {
 
 
 }
+

@@ -1,8 +1,23 @@
-<ul>
-    <li><a routerLink="/" routerLinkActive="active">Welcome</a></li>
-    <li><a routerLink="/owners" routerLinkActive="active">Owners</a></li>
-    <li><a routerLink="/vets" routerLinkActive="active">Vets</a></li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Angular Básico</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" routerLink="/owners" routerLinkActive="active">Owners</a>
+      <a class="nav-item nav-link" routerLink="/vets" routerLinkActive="active">Vets</a>
+    </div>
+  </div>
+</nav>
+<!--
+<app-form-search labelButton="Buscar" (searchEvent)="search()"></app-form-search>
+
+<div class="alert alert-danger" *ngIf="event">Evento recibido: {{event | json}}</div>
+-->
+<div class="container">
 <router-outlet></router-outlet>
+</div>
 
 

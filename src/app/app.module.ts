@@ -6,21 +6,21 @@ import { AppComponent } from './app.component';
 import { SearchModule } from './search/search.module';
 import { HomeComponent } from './components/home/home.component';
 import { VetsComponent } from './components/vets/vets.component';
-import { DetailOwnerComponent } from './components/detail-owner/detail-owner.component';
+import { OwnersModule } from './owners/owners.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    VetsComponent,
-    DetailOwnerComponent
+    VetsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    SearchModule
+    SearchModule,
+    OwnersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

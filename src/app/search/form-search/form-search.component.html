@@ -1,13 +1,14 @@
-<h1>
-  Búscador (Módulo)
-</h1>
-
-<form>
-  <input type="text" name="query" [(ngModel)]="query" placeholder="{{placeholder}}"/>
-  <input type="submit" value="{{labelButton}}" (click)="search()"/>
-  <p>Parametro de búsqueda: {{query}}</p>
-  <p>Resultado: {{result}}</p>
-</form>
-
-
-
+<div class="container jumbotron">
+  <h1>
+    Búscador
+  </h1>
+  <div class="form-inline">
+    <div class="form-group">
+      <label for="query">Query:</label>
+      <input class="form-control" type="text" name="query" [(ngModel)]="query"/>
+    </div>
+    <input type="submit" value="{{labelButton}}" (click)="search()" class="btn btn-primary"/>
+    <p>Parametro de búsqueda: {{query}}</p>
+    <p>Resultado: {{result}}</p>
+  </div>
+</div>

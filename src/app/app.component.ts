@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public labelBuscar ='Buscar';
-  public labelPlaceHolder = 'Escriba el texto a buscar';
+  public event;
+
 
   public msgEventSearch: string;
 
-  constructor(){}
+  constructor() {}
 
-  search(event) {
-    this.msgEventSearch = event.query + ' => ' + event.resultado;
+  searchEvent(e) {
+    this.event = e;
   }
 
 }

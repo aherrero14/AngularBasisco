@@ -11,10 +11,10 @@ export class FormSearchComponent implements OnInit {
 
   public query: string;
   public result: string;
+
   @Input()
   labelButton: string;
-  @Input()
-  placeholder: string;
+
   @Output()
   searchEvent = new EventEmitter;
 
